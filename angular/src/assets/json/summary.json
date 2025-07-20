@@ -1,0 +1,32 @@
+{
+  "stockInventorySummary": [
+    {
+      "id": 1,
+      "icon": "dataset",
+      "title": "Orders",
+      "units": 7256,
+      "status": 10.32
+    },
+    {
+      "id": 2,
+      "icon": "account_balance_wallet",
+      "title": "Profit/Loss",
+      "units": 95,
+      "status": -0.32
+    },
+    {
+      "id": 3,
+      "icon": "insert_chart",
+      "title": "Sales",
+      "units": 347,
+      "status": 12.32
+    },
+    {
+      "id": 4,
+      "icon": "people",
+      "title": "Customers",
+      "units": 1278,
+      "status": 2.45
+    }
+  ]
+}

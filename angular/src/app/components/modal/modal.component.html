@@ -1,0 +1,67 @@
+<h2 mat-dialog-title class="dialog-title">Create New Task</h2>
+<form [formGroup]="taskForm" (ngSubmit)="handleSubmit()" class="task-form">
+  <mat-dialog-content class="dialog-content">
+    <mat-form-field appearance="fill" class="custom-field">
+      <mat-label>Task Type</mat-label>
+      <mat-select formControlName="taskType">
+        <mat-option value="type1">Type 1</mat-option>
+        <mat-option value="type2">Type 2</mat-option>
+        <mat-option value="type3">Type 3</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="custom-field">
+      <mat-label>Assignee</mat-label>
+      <mat-select formControlName="assignee">
+        <mat-option value="assignee1">Assignee 1</mat-option>
+        <mat-option value="assignee2">Assignee 2</mat-option>
+        <mat-option value="assignee3">Assignee 3</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="priority-section">
+      <h6 class="section-title">Priority Level</h6>
+      <mat-radio-group formControlName="priority" class="radio-group">
+        <mat-radio-button value="critical" class="radio-button"
+          >Critical</mat-radio-button
+        >
+        <mat-radio-button value="severe" class="radio-button"
+          >Severe</mat-radio-button
+        >
+        <mat-radio-button value="normal" class="radio-button"
+          >Normal</mat-radio-button
+        >
+      </mat-radio-group>
+    </div>
+
+    <mat-form-field appearance="fill" class="custom-field">
+      <mat-label>Date & Time</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dateTime" />
+      <mat-datepicker-toggle
+        matSuffix
+        [for]="picker"
+        class="date-toggle"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="custom-field">
+      <mat-label>Location</mat-label>
+      <input matInput formControlName="location" />
+    </mat-form-field>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="dialog-actions">
+    <button
+      mat-button
+      type="button"
+      (click)="handleCancel()"
+      class="cancel-button"
+    >
+      Cancel
+    </button>
+    <button mat-button color="primary" type="submit" class="save-button">
+      Save
+    </button>
+  </mat-dialog-actions>
+</form>

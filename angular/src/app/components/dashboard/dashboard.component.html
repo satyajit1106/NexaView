@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="hybrid-chart">
+    <div class="heading">
+      <p class="title">Analysis</p>
+      <select
+        (change)="setSelectedFilter($event)"
+        class="select"
+        name="selectedFilter"
+      >
+        <option value="lastWeek">Weekly</option>
+        <option value="lastMonth">Monthly</option>
+        <option value="last6Months">Last 6 Months</option>
+        <option value="lastYear">Yearly</option>
+      </select>
+    </div>
+    <div class="wrapper">
+      <app-chart [orders]="filteredOrders" />
+    </div>
+  </div>
+  <div class="hybrid-chart">
+    <div class="heading">
+      <p class="title">My Daily Tasks</p>
+      <select (change)="setPieFilter($event)" class="select" name="pieFilter">
+        <option value="lastWeek">Weekly</option>
+        <option value="lastMonth">Monthly</option>
+        <option value="last6Months">Last 6 Months</option>
+        <option value="lastYear">Yearly</option>
+      </select>
+    </div>
+    <div class="wrapper">
+      <div class="tabs">
+        <div
+          (click)="toggleView()"
+          [classList]="currentView === 'Online' ? 'tab active-tab' : 'tab'"
+        >
+          <span>Online</span>
+        </div>
+        <div
+          (click)="toggleView()"
+          [classList]="currentView === 'Offline' ? 'tab active-tab' : 'tab'"
+        >
+          <span>Offline</span>
+        </div>
+      </div>
+      @if (currentView === "Online") {
+      <app-pie [metrics]="metrics" [onlineTotal]="onlineTotal" />
+      } @else {
+      <app-piechart [metrics]="offlineMetrics" [onlineTotal]="offlineTotal" />
+      }
+    </div>
+  </div>
+  <div class="hybrid-chart">
+    <div class="heading">
+      <p class="title">Shipment Statistics</p>
+      <div routerLink="/tracking" class="link">View All</div>
+    </div>
+    <div class="wrapper">
+      <app-shipment [metrics]="shipmentMetrics" [total]="shipmentTotal" />
+    </div>
+  </div>
+  <div class="blog-wrapper">
+    <div class="blog-heading">
+      <p class="blog-title">Food Safety Blogs</p>
+      <div routerLink="/blogs" class="link">View All</div>
+    </div>
+    <div class="blog-grid">
+      @for (blog of asideBlogs; track $index) {
+      <div routerLink="/blog/{{ blog.id }}" class="card">
+        <img width="200" [src]="blog?.image" alt="blog cover" />
+        <div class="content">
+          <p class="title">{{ formattedDate(blog?.publishedDate) }}</p>
+          <h4 class="title truncate">{{ blog?.title }}</h4>
+          <h6 class="title truncate">{{ blog?.description }}</h6>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

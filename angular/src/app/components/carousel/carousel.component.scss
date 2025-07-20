@@ -1,0 +1,39 @@
+.carousel {
+  position: relative;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade {
+  opacity: 1;
+  border-radius: 14px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  background-color: lightgray;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dots .active {
+  background-color: white;
+}

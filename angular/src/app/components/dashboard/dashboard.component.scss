@@ -1,0 +1,154 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 16px;
+  gap: 16px;
+  max-width: 100vw;
+  overflow: auto;
+}
+
+.hybrid-chart {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 12px 2px #00000010;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 10px;
+  background-color: #eeeff7;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.title {
+  margin: 0;
+  font-weight: 500;
+  color: #4050b5;
+}
+
+.select {
+  padding: 8px 6px;
+  border-radius: 10px;
+  background-color: #eeeff7;
+  border: 1px solid gray;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab {
+  flex-grow: 1;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.active-tab {
+  border-bottom: 2px solid #4050b5;
+}
+
+.link {
+  color: #4050b5;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  padding: 8px 6px;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #324098;
+}
+
+.blog-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  // padding: 10px;
+  border-radius: 12px;
+}
+
+.blog-title {
+  margin: 0;
+}
+
+.blog-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
+  gap: 10px;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 2px 2px 12px 2px #00000010;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #c5cae9;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.title {
+  margin: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,12 @@
+<div class="carousel">
+  <img [src]="images[currentIndex]" class="fade" alt="carousel image" />
+
+  <div class="dots">
+    @for (img of images; track $index) {
+    <span
+      (click)="goToSlide($index)"
+      [class.active]="$index === currentIndex"
+    ></span>
+    }
+  </div>
+</div>

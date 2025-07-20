@@ -1,0 +1,43 @@
+<nav [className]="isOpen ? 'nav expanded' : 'nav collapsed'">
+  <!-- Top -->
+  <div class="top">
+    <!-- Brand -->
+    <div (click)="toggleSidebar()" [classList]="isOpen ? 'brand' : 'logo'">
+      <img src="assets/images/logo.png" alt="Grocery Store Logo" />
+      @if(isOpen) {
+      <div class="titles">
+        <p class="title">Grocery Store</p>
+        <p class="title">Management System</p>
+      </div>
+      }
+    </div>
+    <!-- Links -->
+    <ul class="nav-links">
+      @for (link of sideLinks; track link?.id) {
+      <li
+        routerLinkActive="active"
+        [routerLink]="link.href"
+        [classList]="isOpen ? 'nav-link' : 'nav-btn'"
+      >
+        <mat-icon aria-hidden="false" [fontIcon]="link.icon" />
+        @if (isOpen) {
+        <span class="title">{{ link?.content }}</span
+        >}
+      </li>
+      }
+    </ul>
+  </div>
+  <!-- Bottom -->
+  <div class="bottom">
+    <ul class="nav-links">
+      @for (link of bottomLinks; track link?.id) {
+      <li [classList]="isOpen ? 'nav-link' : 'nav-btn'">
+        <mat-icon aria-hidden="false" [fontIcon]="link.icon" />
+        @if (isOpen) {
+        <span class="title">{{ link?.content }}</span
+        >}
+      </li>
+      }
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,174 @@
+{
+  "blogs": [
+    {
+      "id": "001",
+      "title": "Exploring Thai Street Food: A Spicy Adventure",
+      "image": "assets/images/blog1.jpg",
+      "type": "Food",
+      "description": "Join me on a culinary journey through the bustling streets of Bangkok, tasting fiery curries and tangy mango sticky rice.",
+      "publishedDate": "2025-02-27T00:00:00",
+      "blogInfo": {
+        "carouselImage": [
+          "assets/images/image1.jpg",
+          "assets/images/image2.jpg",
+          "assets/images/image3.jpg"
+        ],
+        "postBy": "Amara Singh",
+        "desc": "A deep dive into the vibrant flavors that define Thai cuisine."
+      }
+    },
+    {
+      "id": "002",
+      "title": "The Rise of Quantum Computing",
+      "image": "assets/images/blog1.jpg",
+      "type": "Technology",
+      "description": "Unpacking the latest breakthroughs in quantum tech and what they mean for the future of computing.",
+      "publishedDate": "2024-11-15T00:00:00",
+      "blogInfo": {
+        "carouselImage": [
+          "assets/images/image1.jpg",
+          "assets/images/image2.jpg",
+          "assets/images/image3.jpg"
+        ],
+        "postBy": "Dr. Elias Morton",
+        "desc": "An expert analysis on quantum bits and their applications."
+      }
+    },
+    {
+      "id": "003",
+      "title": "Hiking the Alps: A Beginner’s Guide",
+      "image": "assets/images/blog1.jpg",
+      "type": "Travel",
+      "description": "Tips and tricks for tackling the stunning trails of the Swiss Alps, from gear to breathtaking views.",
+      "publishedDate": "2025-01-10T00:00:00",
+      "blogInfo": {
+        "carouselImage": [
+          "assets/images/image1.jpg",
+          "assets/images/image2.jpg",
+          "assets/images/image3.jpg"
+        ],
+        "postBy": "Lena Gruber",
+        "desc": "A personal account of conquering the peaks and valleys."
+      }
+    },
+    {
+      "id": "004",
+      "title": "Vintage Vinyl: Rediscovering the 70s",
+      "image": "assets/images/blog1.jpg",
+      "type": "Music",
+      "description": "A nostalgic look at the grooviest records of the 1970s and where to find them today.",
+      "publishedDate": "2023-06-19T00:00:00",
+      "blogInfo": {
+        "carouselImage": [
+          "assets/images/image1.jpg",
+          "assets/images/image2.jpg",
+          "assets/images/image3.jpg"
+        ],
+        "postBy": "Miles Carter",
+        "desc": "One collector’s journey through disco, rock, and funk."
+      }
+    },
+    {
+      "id": "005",
+      "title": "Minimalist Living: Decluttering Your Life",
+      "image": "assets/images/blog1.jpg",
+      "type": "Lifestyle",
+      "description": "How to embrace simplicity and find peace in a world full of stuff.",
+      "publishedDate": "2022-09-03T00:00:00",
+      "blogInfo": {
+        "carouselImage": [
+          "assets/images/image1.jpg",
+          "assets/images/image2.jpg",
+          "assets/images/image3.jpg"
+        ],
+        "postBy": "Sophie Lin",
+        "desc": "Practical steps to a clutter-free existence."
+      }
+    },
+    {
+      "id": "006",
+      "title": "The Art of Sourdough: Baking at Home",
+      "image": "assets/images/blog1.jpg",
+      "type": "Food",
+      "description": "Master the perfect loaf with this step-by-step guide to sourdough starters and baking.",
+      "publishedDate": "2024-03-22T00:00:00",
+      "blogInfo": {
+        "carouselImage": [
+          "assets/images/image1.jpg",
+          "assets/images/image2.jpg",
+          "assets/images/image3.jpg"
+        ],
+        "postBy": "Clara Evans",
+        "desc": "From starter to crusty perfection—your bread awaits."
+      }
+    },
+    {
+      "id": "007",
+      "title": "AI Ethics: Where Do We Draw the Line?",
+      "image": "assets/images/blog1.jpg",
+      "type": "Technology",
+      "description": "Exploring the moral dilemmas of artificial intelligence in 2025 and beyond.",
+      "publishedDate": "2025-03-01T00:00:00",
+      "blogInfo": {
+        "carouselImage": [
+          "assets/images/image1.jpg",
+          "assets/images/image2.jpg",
+          "assets/images/image3.jpg"
+        ],
+        "postBy": "Rahul Patel",
+        "desc": "A thought-provoking look at AI’s impact on society."
+      }
+    },
+    {
+      "id": "008",
+      "title": "Hidden Gems of Eastern Europe",
+      "image": "assets/images/blog1.jpg",
+      "type": "Travel",
+      "description": "Discover lesser-known destinations like Romania’s castles and Latvia’s quaint villages.",
+      "publishedDate": "2023-12-12T00:00:00",
+      "blogInfo": {
+        "carouselImage": [
+          "assets/images/image1.jpg",
+          "assets/images/image2.jpg",
+          "assets/images/image3.jpg"
+        ],
+        "postBy": "Olga Petrova",
+        "desc": "Off-the-beaten-path adventures await."
+      }
+    },
+    {
+      "id": "009",
+      "title": "Jazz Through the Ages",
+      "image": "assets/images/blog1.jpg",
+      "type": "Music",
+      "description": "From New Orleans roots to modern fusion, tracing jazz’s evolution.",
+      "publishedDate": "2021-08-07T00:00:00",
+      "blogInfo": {
+        "carouselImage": [
+          "assets/images/image1.jpg",
+          "assets/images/image2.jpg",
+          "assets/images/image3.jpg"
+        ],
+        "postBy": "Dexter Holmes",
+        "desc": "A melodic history of an American classic."
+      }
+    },
+    {
+      "id": "010",
+      "title": "Sustainable Gardening in Urban Spaces",
+      "image": "assets/images/blog1.jpg",
+      "type": "Lifestyle",
+      "description": "Grow your own food even in the smallest city apartments with these eco-friendly tips.",
+      "publishedDate": "2024-07-30T00:00:00",
+      "blogInfo": {
+        "carouselImage": [
+          "assets/images/image1.jpg",
+          "assets/images/image2.jpg",
+          "assets/images/image3.jpg"
+        ],
+        "postBy": "Tara Nguyen",
+        "desc": "Green living, one plant at a time."
+      }
+    }
+  ]
+}

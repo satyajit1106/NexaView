@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="grid">
+    <div class="blogs">
+      <div routerLink="/blogs" class="back">
+        <mat-icon class="icon" fontIcon="arrow_back" />
+        <h5 class="greeting">Food Safety News</h5>
+      </div>
+      <div class="slider">
+        <app-carousel [images]="currentBlog?.blogInfo?.carouselImage" />
+      </div>
+      <div class="post">
+        <p class="nospace date">
+          {{ formattedDate(currentBlog?.publishedDate) }}
+        </p>
+        <h2 class="nospace title">{{ currentBlog?.title }}</h2>
+        <h5 class="nospace subtitle">Posted by</h5>
+        <div class="nospace user">
+          <div class="nospace profile">RP</div>
+          <p class="nospace username">Roman Pearce</p>
+          <p class="nospace userrole">Marketing Manager</p>
+        </div>
+        <hr />
+        <div class="description">
+          {{ currentBlog.description }}
+        </div>
+      </div>
+    </div>
+    <div class="aside">
+      <p class="greeting">Related News</p>
+      @for (post of related; track $index) {
+      <div routerLink="/blog/{{ post?.id }}" class="card">
+        <img width="200" [src]="post?.image" alt="blog cover" />
+        <div class="content">
+          <p class="card-title">{{ formattedDate(post?.publishedDate) }}</p>
+          <h4 class="card-title">{{ post?.title }}</h4>
+          <h6 class="card-title truncate">{{ post?.description }}</h6>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

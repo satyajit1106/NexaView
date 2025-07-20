@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="tracking-header">
+    <!-- Tabs -->
+    <div class="tabs">
+      <div
+        [classList]="
+          isCurrentPath('/stocks/overview') ? 'tab active-tab' : 'tab'
+        "
+        routerLink="overview"
+        class="tab"
+      >
+        <span>Stocks Overview</span>
+      </div>
+      <div
+        [classList]="
+          isCurrentPath('/stocks/high-demand') ? 'tab active-tab' : 'tab'
+        "
+        routerLink="high-demand"
+        class="tab"
+      >
+        <span>High-Demand Orders</span>
+      </div>
+      <div class="tab disabled">
+        <span>Returns & Defects</span>
+      </div>
+      <div class="tab disabled">
+        <span>Out of Stock Alerts</span>
+      </div>
+    </div>
+    <!-- Button -->
+    <button (click)="openModal()" class="btn">
+      <mat-icon class="icon" fontIcon="add_circle_outline" />
+      <span class="btn-text">Create New Task</span>
+    </button>
+  </div>
+  <router-outlet />
+</div>

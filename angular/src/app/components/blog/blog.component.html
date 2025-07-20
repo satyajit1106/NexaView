@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="greeting">All Blog Posts</div>
+  <div class="grid">
+    <div class="blogs">
+      <div class="sub-grid">
+        @if(filteredBlogs.length === 0) {
+        <p>No blogs found.</p>
+        } @for (blog of filteredBlogs; track $index) {
+        <div routerLink="/blog/{{ blog.id }}" class="card">
+          <img width="200" [src]="blog?.image" alt="blog cover" />
+          <div class="content">
+            <p class="title">{{ formattedDate(blog?.publishedDate) }}</p>
+            <h4 class="title truncate">{{ blog?.title }}</h4>
+            <h6 class="title truncate">{{ blog?.description }}</h6>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    <div class="aside">
+      <p>On this page</p>
+      <h4>Food Safety<br />News Blogs</h4>
+      <h6>Featured year wise</h6>
+      <div class="links">
+        <span (click)="applyFilter('0')" class="link">All</span>
+        <span (click)="applyFilter('2025')" class="link">2025</span>
+        <span (click)="applyFilter('2024')" class="link">2024</span>
+        <span (click)="applyFilter('2023')" class="link">2023</span>
+        <span (click)="applyFilter('2022')" class="link">2022</span>
+        <span (click)="applyFilter('2021')" class="link">2021</span>
+      </div>
+    </div>
+  </div>
+</div>

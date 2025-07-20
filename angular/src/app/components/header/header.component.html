@@ -1,0 +1,26 @@
+<div [classList]="isOpen ? 'collapsed' : 'expanded'">
+  <header class="header">
+    <div class="left">
+      <div class="search">
+        <input
+          placeholder="Search..."
+          class="search-input"
+          type="text"
+          name="search"
+          id="search"
+        />
+        <mat-icon class="icon" fontIcon="search" />
+      </div>
+    </div>
+    <div class="right">
+      <mat-icon class="bell" fontIcon="notifications" />
+      <div (click)="toggleProfile()" class="profile">JD</div>
+    </div>
+    @if (isProfileVisible) {
+    <div class="profile-menu">
+      <button routerLink="/login" class="logout-btn">Logout</button>
+    </div>
+    }
+  </header>
+  <router-outlet />
+</div>

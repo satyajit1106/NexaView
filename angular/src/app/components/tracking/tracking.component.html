@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="tracking-header">
+    <h5 class="tracking-header-text">Shipment Tracking</h5>
+    <button (click)="openModal()" class="btn">
+      <mat-icon class="icon" fontIcon="add_circle_outline" />
+      <span class="btn-text">Create New Task</span>
+    </button>
+  </div>
+  <!-- Content -->
+  <div class="tracking-content">
+    <!-- Tabs -->
+    <div class="tabs">
+      <div
+        [classList]="isCurrent('all') ? 'tab active-tab' : 'tab'"
+        (click)="applyFilter('all')"
+        class="tab"
+      >
+        <span>All</span>
+      </div>
+      <div
+        [classList]="isCurrent('in-transit') ? 'tab active-tab' : 'tab'"
+        (click)="applyFilter('in-transit')"
+        class="tab"
+      >
+        <span>In-Transit</span>
+      </div>
+      <div
+        [classList]="isCurrent('completed') ? 'tab active-tab' : 'tab'"
+        (click)="applyFilter('completed')"
+        class="tab"
+      >
+        <span>Completed</span>
+      </div>
+      <div
+        [classList]="isCurrent('pending') ? 'tab active-tab' : 'tab'"
+        (click)="applyFilter('pending')"
+        class="tab"
+      >
+        <span>Pending</span>
+      </div>
+      <div
+        [classList]="isCurrent('failed') ? 'tab active-tab' : 'tab'"
+        (click)="applyFilter('failed')"
+        class="tab"
+      >
+        <span>Failed</span>
+      </div>
+    </div>
+    <!-- Table -->
+    <app-table2
+      [datasource]="filteredData"
+      [displayedColumns]="displayedColumns"
+    />
+  </div>
+</div>

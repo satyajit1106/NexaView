@@ -1,0 +1,8 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav mode="side" opened class="sidebar">
+    <app-sidebar [isOpen]="isOpen" (toggle)="toggleSidebar()" />
+  </mat-sidenav>
+  <mat-sidenav-content class="header">
+    <app-header [isOpen]="isOpen" />
+  </mat-sidenav-content>
+</mat-sidenav-container>

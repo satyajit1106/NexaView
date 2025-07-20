@@ -1,0 +1,116 @@
+.dialog-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.task-form {
+  min-width: 400px;
+  padding: 20px;
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+.custom-field {
+  width: 100%;
+}
+
+.custom-field .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.custom-field .mat-form-field-flex {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 0 10px;
+}
+
+.priority-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-title {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.radio-group {
+  display: flex;
+  gap: 8px;
+  padding: 5px 0;
+}
+
+.radio-button {
+  margin: 5px 0;
+}
+
+.radio-button.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #1976d2;
+}
+
+.radio-button .mat-radio-inner-circle {
+  background-color: #1976d2;
+}
+
+.dialog-actions {
+  padding: 20px 0 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.cancel-button {
+  color: #666;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  font-weight: 500;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cancel-button:hover {
+  background-color: #f5f5f5;
+}
+
+.save-button {
+  text-transform: uppercase;
+  padding: 6px 16px;
+  font-weight: 500;
+  background-color: #1976d2;
+  color: white !important;
+  border-radius: 4px;
+}
+
+.save-button:hover {
+  background-color: #1565c0;
+}
+
+.date-toggle {
+  color: #666;
+}
+
+@media (max-width: 480px) {
+  .task-form {
+    min-width: 100%;
+    padding: 15px;
+  }
+
+  .dialog-title {
+    font-size: 20px;
+  }
+}

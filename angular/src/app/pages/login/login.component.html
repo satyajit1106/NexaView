@@ -1,0 +1,46 @@
+<div class="bg">
+  <div class="container">
+    <h4 class="subtitle">WELCOME TO THE</h4>
+    <div class="titles">
+      <h2 class="title">GROCERY STORE</h2>
+      <h2 class="title highlighted-title">MANAGEMENT SYSTEM</h2>
+    </div>
+    <p class="para">
+      Streamline inventory, track orders, manage suppliers, and enhance store
+      operations-all in one place. Log in to keep everything running smoothly.
+    </p>
+    <div class="separator"></div>
+    <form (ngSubmit)="handleSubmit()" [formGroup]="loginForm" class="form">
+      <h4 class="subtitle">ACCOUNT SIGN IN</h4>
+      <label class="label" for="username">
+        <span class="small">Username</span>
+        <input
+          formControlName="username"
+          placeholder="Username"
+          type="username"
+          name="username"
+          id="username"
+        />
+      </label>
+      <label class="label" for="password">
+        <span class="small">Password</span>
+        <input
+          formControlName="password"
+          placeholder="Password"
+          type="password"
+          name="password"
+          id="password"
+        />
+      </label>
+      <div class="flex">
+        <h6 class="bottom-text">
+          Don't have an account?
+          <span routerLink="/signup" class="link">Sign up</span>
+        </h6>
+        <button [disabled]="!loginForm.valid" class="btn" type="submit">
+          Sign in
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

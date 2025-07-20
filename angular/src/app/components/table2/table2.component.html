@@ -1,0 +1,83 @@
+<div class="container">
+  <table
+    matSort
+    (matSortChange)="announceSortChange($event)"
+    mat-table
+    [dataSource]="datasourceFinal"
+    class="mat-elevation-z8"
+  >
+    @for (col of displayedColumns; track $index) {
+    <ng-container [matColumnDef]="col">
+      <th
+        mat-sort-header
+        sortActionDescription="Sort by number"
+        mat-header-cell
+        *matHeaderCellDef
+      >
+        {{ col[0].toUpperCase() + col.substring(1) }}
+      </th>
+      <td mat-cell *matCellDef="let element">
+        @if (element[col]?.toString().startsWith("assets/")) {
+        <img class="img" width="32" [src]="element[col]" alt="pfp" />
+        } @else { @if (col === "status") { @if(element[col] === "pending") {
+        <span class="pending">{{
+          element[col][0].toUpperCase() + element[col].substring(1)
+        }}</span>
+        } @else if (element[col] === "completed") {
+        <span class="completed">{{
+          element[col][0].toUpperCase() + element[col].substring(1)
+        }}</span>
+        } @else if(element[col] === "failed") {
+        <span class="failed">{{
+          element[col][0].toUpperCase() + element[col].substring(1)
+        }}</span>
+        } @else {<span class="closed">{{ "Transit" }}</span
+        >} } @else if (type === "action" && element[col] === "edit") {
+        <mat-icon
+          class="icon"
+          aria-hidden="false"
+          aria-label="edit icon"
+          fontIcon="edit"
+        ></mat-icon>
+        } @else if (type === "action" && element[col] === "more") {
+        <mat-icon
+          class="icon"
+          aria-hidden="false"
+          aria-label="more icon"
+          fontIcon="more_vert"
+        ></mat-icon>
+        } @else if (col === "dateOfEntry" || col === "createdAt" || col ===
+        "updatedAt" || col === "deliveryDate") {
+        <span>{{ formatDate(element[col]) }}</span>
+        } @else if (col === "price" || col === "sellingPrice") {
+        <span>{{ "₹" + element[col] }}</span>
+        } @else {
+        <span class="truncate">{{ element[col] }}</span>
+        } }
+      </td>
+    </ng-container>
+    }
+
+    <ng-container matColumnDef="Tracking">
+      <th mat-header-cell *matHeaderCellDef>Tracking</th>
+      <td mat-cell *matCellDef="let element">
+        <span routerLink="/map" class="map-link">Maps</span>
+      </td>
+    </ng-container>
+
+    <tr
+      mat-header-row
+      *matHeaderRowDef="displayedColumns.concat('Tracking')"
+    ></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns.concat('Tracking')"
+    ></tr>
+  </table>
+</div>
+<mat-paginator
+  [pageSizeOptions]="[5, 10, 20]"
+  showFirstLastButtons
+  aria-label="Select page of periodic elements"
+>
+</mat-paginator>
